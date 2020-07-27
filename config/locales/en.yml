@@ -244,21 +244,18 @@ en:
 
     management:
       admin_management: 'Admin Management'
-      admin_users: 'Admin Users'
       cancel: 'Cancel'
       edit: 'Edit'
       edit_admin: 'Edit Admin'
-      edit_super_admin: 'Edit Super Admin'
       email: 'Email'
       introduction: 'Click here to manage system admin users.'
       locations: 'Locations'
-      manage_admins: 'Manage Admins'
-      manage_super_admins: 'Manage Super Admins'
+      manage_admins: 'Admin Users'
+      manage_super_admins: 'Super Admin Users'
       name: 'Name'
       no_locations: 'This admin is not affiliated with any locations.'
       remove: 'Remove'
       save: 'Save'
-      super_admin_users: 'Super Admin Users'
 
     not_authorized: 'You are not authorized to perform this action.'
 

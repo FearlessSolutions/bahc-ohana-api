@@ -92,7 +92,6 @@ class Location < ApplicationRecord
   validates :languages, pg_array: true
 
   validates :admin_emails, array: { email: true }
-  validates :admin_emails, pg_array: true
 
   validates :email, email: true, allow_blank: true
 
@@ -112,7 +111,7 @@ class Location < ApplicationRecord
   auto_strip_attributes :description, :email, :name, :short_desc,
                         :transportation, :website
 
-  auto_strip_attributes :admin_emails, reject_blank: true, nullify_array: false
+  auto_strip_attributes :admin_emails, reject_blank: true, nullify: false
 
   extend FriendlyId
   friendly_id :slug_candidates, use: [:history]

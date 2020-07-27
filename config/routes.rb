@@ -65,10 +65,7 @@ Rails.application.routes.draw do
       get 'organizations/:organization_id/contacts/:id', to: 'organization_contacts#edit'
       get 'programs/:id', to: 'programs#edit'
 
-      namespace :management do
-        resources :admins, only: %i[index edit update]
-        resources :super_admins, only: %i[index edit update]
-      end
+      resources :management, only: %i[index edit update]
       put '/drop_admin', to: 'management#drop_admin', as: 'drop_from_location'
 
       get 'analytics', to: 'analytics#index'

@@ -1,9 +1,0 @@
-%tr.admin-row
-  %td.data.name
-    = link_to location.name, edit_admin_location_path(location.slug)
-  %td.table-button.edit-admin
-    = form_for(location, as: :location, url: admin_drop_from_location_path, html: { method: :put }) do |f|
-      = f.hidden_field :admin_id, value: admin.id
-      = f.hidden_field :id, value: location.id
-      .actions
-        = f.submit t('admin.management.remove'), class: 'button'

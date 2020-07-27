@@ -1,0 +1,30 @@
+.devise.admin-list
+
+  %h2
+    = t('admin.management.manage_super_admins')
+
+  %table
+    %tr.headings
+      %th.data.name
+        = t('admin.management.name')
+      %th.data.email
+        = t('admin.management.email')
+
+    - @super_admins.each do |super_admin|
+      = render partial: 'super_admin_row', locals: { super_admin: super_admin }
+
+  %h2
+    = t('admin.management.manage_admins')
+
+  %table
+    %tr.headings
+      %th.data.name
+        = t('admin.management.name')
+      %th.data.email
+        = t('admin.management.email')
+      %th.data.locations
+        = t('admin.management.locations')
+      %th.table-button.edit-admin &nbsp;
+
+    - @admins.each do |admin|
+      = render partial: 'admin_row', locals: { admin: admin }

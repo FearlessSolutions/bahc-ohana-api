@@ -6,6 +6,6 @@
   %td.data.locations
     = admin.locations.map(&:name).join(', ')
   %td.table-button.edit-admin
-    = form_for(admin, as: admin, url: edit_admin_management_admin_url(admin.id), html: { method: :get }) do |f|
+    = form_for(admin, as: admin, url: edit_admin_management_path(admin.id), html: { method: :get }) do |f|
       .actions
         = f.submit t('admin.management.edit'), class: 'button'

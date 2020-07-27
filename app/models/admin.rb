@@ -7,8 +7,6 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
 
-  update_index('admins#admin') { self }
-
   def locations
     Location.where("'#{email}' = ANY (admin_emails)")
   end

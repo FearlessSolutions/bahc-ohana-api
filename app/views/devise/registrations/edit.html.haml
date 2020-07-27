@@ -44,6 +44,5 @@
     = t('admin.management.admin_management')
   %p
     = t('admin.management.introduction')
-  %div.btn-row
-    = button_to t('admin.management.manage_admins'), admin_management_admins_path, method: :get, class: 'button'
-    = button_to t('admin.management.manage_super_admins'), admin_management_super_admins_path, method: :get, class: 'button'
+  = button_to t('admin.management.manage_admins'), admin_management_index_path, method: :get, class: 'button'
+
