@@ -8,14 +8,14 @@ class Admin
     layout 'admin'
 
     def index
-      @ui_analytics = get_ui_analytics
+      @ui_analytics = get_ui_analytics(@start_date, @end_date)
       @total_homepage_views = total_homepage_views(@ui_analytics)
-      @new_homepage_views = new_homepage_views(@ui_analytics, @start_date, @end_date)
-      @organizations_count = Organization.all.count
+      @new_homepage_views = new_homepage_views(@ui_analytics)
+      @organizations_count = Organization.count
       @new_org_count = Organization.where(created_at: @start_date.beginning_of_day..@end_date.end_of_day).count
-      @locations_count = Location.all.count
+      @locations_count = Location.count
       @new_location_count = Location.where(created_at: @start_date.beginning_of_day..@end_date.end_of_day).count
-      @services_count = Service.all.count
+      @services_count = Service.count
       @new_service_count = Service.where(created_at: @start_date.beginning_of_day..@end_date.end_of_day).count
     end
 
