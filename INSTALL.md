@@ -6,7 +6,6 @@ Clone it on your computer and navigate to the project's directory:
 
     git clone git@github.com:bchd/bahc-ohana-api.git && cd bchd-ohana-api
 
-
 ## Elasticsearch Setup
 
 - Install right version of ElasticSearch 
@@ -20,7 +19,6 @@ Clone it on your computer and navigate to the project's directory:
         $ bin/elasticsearch
 
 - Go to: [http://localhost:9200](http://localhost:9200) and check that is running and the version is 5.6
-
 
 ## Local Setup
 
