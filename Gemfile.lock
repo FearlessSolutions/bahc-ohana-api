@@ -414,7 +414,7 @@ GEM
     sentry-raven (3.1.1)
       faraday (>= 1.0)
     sexp_processor (4.15.0)
-    shrine (3.2.2)
+    shrine (3.3.0)
       content_disposition (~> 1.0)
       down (~> 5.1)
     simplecov (0.18.5)
@@ -531,7 +531,7 @@ DEPENDENCIES
   selenium-webdriver
   sentry-raven
   shoulda-matchers!
-  shrine (~> 3.0)
+  shrine (~> 3.3)
   simplecov
   simplemde-rails (~> 1.11, >= 1.11.2)
   smarter_csv
